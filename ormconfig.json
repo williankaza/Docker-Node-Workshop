@@ -4,5 +4,14 @@
     "port": 30101,
     "username": "sa",
     "password": "teste",
-    "database": "db_inicial"
+    "database": "db_inicial",
+    "entities": [
+        "./src/models/*.ts"
+    ],
+    "migrations": [
+        "./src/database/migrations/*.ts"
+    ],
+    "cli": {
+        "migrationsDir": "./src/database/migrations"
+    }
 }

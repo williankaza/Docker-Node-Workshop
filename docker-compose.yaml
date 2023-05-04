@@ -1,0 +1,26 @@
+version: '3.1'
+services:
+  postgres:
+    image: postgres:13.2
+    environment:
+      - POSTGRES_USER=sa
+      - POSTGRES_PASSWORD=teste
+      - POSTGRES_DB=db_inicial
+    ports:
+      - "30101:5432"
+  postgres_will:
+    image: postgres:14.2
+    environment:
+      - POSTGRES_USER=sa
+      - POSTGRES_PASSWORD=teste
+      - POSTGRES_DB=db_inicial
+    ports:
+      - "30102:5432"
+  postgres_acb:
+    image: postgres:14.2
+    environment:
+      - POSTGRES_USER=sa
+      - POSTGRES_PASSWORD=teste
+      - POSTGRES_DB=db_inicial
+    ports:
+      - "30100:5432"

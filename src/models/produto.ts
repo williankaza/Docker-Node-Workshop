@@ -1,11 +1,14 @@
-import { uuid } from "uuidv4";
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from "typeorm";
 
+@Entity('produto')
 class Produto{
+    @PrimaryGeneratedColumn('uuid')
     id: string;
+
+    @Column('varchar')
     nome: string;
 
     constructor(nome: string){
-        this.id = uuid();
         this.nome = nome;
     }
 }
